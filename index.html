@@ -1,0 +1,84 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>azList - a jQuery plugin</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="jquery.azlist.js"></script>
+
+	<script>
+		window.onload = function(){
+			$('#azInitButton').click(function(){
+				$('ul#azList').azList();
+				$(this).parent().prev('p').text('Now it\'s a shiny and easy to navigate azList...');
+				$(this).remove();
+				return false;
+			});
+		}
+	</script>
+
+<style>
+	.azListIndex li      { display:inline; padding:0.2em; }
+	.azListIndex li a    { background:#f0f0f0; border-bottom:1px solid #ccc; padding: 0.1em 0.3em; text-decoration:none; }
+	.azListIndex a:hover { background:#dedede; border-bottom:1px solid #000; }
+	.azListInitial       { list-style-type:none; font-size:1.4em; padding-top:0.6em; }
+	
+	html { background:#eee; }
+	body { font-family:helvetica,arial,sans-serif; margin:1em auto; padding: 1em 1em 30em 1em; width: 600px; background:#fff; }
+</style>
+
+</head>
+<body>
+
+	<h1>azList - a little jQuery plugin</h1>
+
+	<ul>
+		<li>Got a big long list of dull stuff on your website?</li>
+		<li>Is it too hard to find anything in the big dull list?</li>
+	</ul>
+
+	<p>Then you need azList.  <em>It sorts all your dull stuff and gives a nice index at the top.</em></p>
+	
+	<p>Usage: <code>$('ul#azList').azList(); </code></p>
+	
+	<p><a href="jquery.azlist.js">Download azList</a></p>
+		
+	<h2>Demo</h2>
+	
+	<p>Here's a normal boring old list...</p>
+	
+	<form><button id="azInitButton">Convert list to a shiny azList</button></form>
+
+		<ul id="azList">
+		
+			<li><a href="http://google.com/">Google</a></li>
+			<li><a href="http://yahoo.com/">Yahoo</a></li>
+			<li><a href="http://hotbot.com/">Hotbot</a></li>
+			<li><a href="http://altavista.com">Alta Vista</a></li>
+			<li><a href="http://bing.com">Bing</a></li>
+			<li><a href="http://search.com/">Search</a></li>
+			<li><a href="http://alltheweb.com/">All The Web</a></li>
+			<li><a href="http://www.blackle.com/">Blackle</a></li>
+			<li><a href="http://goosh.org/">Goosh</a></li>
+			<li><a href="http://123-reg.co.uk/">123-reg (not a service engine, I know)</a></li>
+			<!--<li><a href="http://money.com/">$$$$ (for testing)</a></li>-->
+		</ul>
+
+
+
+<script>
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js'%3E%3C/script%3E"));
+</script>
+<script>
+	try 
+	{
+		var pageTracker = _gat._getTracker("UA-920590-3");
+		pageTracker._trackPageview();
+	} 
+	catch(err) 
+	{}
+</script>
+
+</body>
+</html>
